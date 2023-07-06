@@ -2,6 +2,7 @@
 class ARButton {
   constructor() {
     this.value = 0;
+    this.valueChangedCallbacks = [];
   }
 
   createButton() {
@@ -10,13 +11,23 @@ class ARButton {
     button.addEventListener('click', () => {
       this.incrementValue();
       console.log('ボタンクリック後の値:', this.value);
-      this.dispatchEvent(new CustomEvent('valueChanged', { detail: this.value }));
+      this.dispatchValueChangedEvent();
     });
     return button;
   }
 
   incrementValue() {
     this.value++;
+  }
+
+  addValueChangedCallback(callback) {
+    this.valueChangedCallbacks.push(callback);
+  }
+
+  dispatchValueChangedEvent() {
+    for (const callback of this.valueChangedCallbacks) {
+      callback(this.value);
+    }
   }
 }
 
