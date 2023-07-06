@@ -24,19 +24,19 @@
 
 		<script type="module">
 
-import ARButton from './ARButton_r2.js';
+			import {ARButton} from './ARButton_r2.js';
 
-const arButton = new ARButton();
+			const arButton = new ARButton();
 
-function displayValue(event) {
-  const value = event.detail;
-  console.log('Aで表示される値:', value);
-}
+			function displayValue(event) {
+				const value = event.detail;
+				console.log('Aで表示される値:', value);
+			}
 
-arButton.addEventListener('valueChanged', displayValue);
+			arButton.addEventListener('valueChanged', displayValue);
 
-const button = arButton.createButton();
-document.body.appendChild(button);
+			const button = arButton.createButton();
+			document.body.appendChild(button);
 
 		</script>
 	</body>
