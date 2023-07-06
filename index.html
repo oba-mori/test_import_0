@@ -23,16 +23,20 @@
 
 
 		<script type="module">
-			import { ARButton } from './ARButton_r2.js';
 
-			const arButton = new ARButton();
+import ARButton from './ARButton_r2.js';
 
-			function displayValue() {
-				console.log('Aで表示される値:', arButton.value);
-			}
+const arButton = new ARButton();
 
-			arButton.incrementValue(); // Bでの値の変更をトリガーする例
-			displayValue(); // Aでの値の表示
+function displayValue(event) {
+  const value = event.detail;
+  console.log('Aで表示される値:', value);
+}
+
+arButton.addEventListener('valueChanged', displayValue);
+
+const button = arButton.createButton();
+document.body.appendChild(button);
 
 		</script>
 	</body>
