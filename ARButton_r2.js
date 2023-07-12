@@ -3,6 +3,8 @@ class ARButton {
   constructor() {
     this.value = 0;
     this.valueChangedCallbacks = [];
+
+    this.a = 0;
   }
 
   createButton() {
@@ -32,10 +34,12 @@ class ARButton {
 		if (this.value == 0)
 		{
   	  this.value = 1;
+  	  this.a = 1;
 		}
 		else
 		{
 			this.value = 0;
+      this.a = 0;
 		}
 	}
 

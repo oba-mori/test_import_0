@@ -30,6 +30,13 @@
 			// 値が変更された時に通知が来て実行される関数
 			function handleValueChanged(value) {
 				console.log('値が変更されました:', value);
+
+				
+
+
+				const arButton = new ARButton();
+				//表示
+				console.log('a : ', arButton.a);
 			}
 
 			// ARButton_r2の関数を実行(関数handleValueChangedを渡しながら)
@@ -41,6 +48,11 @@
 			// ボタンを配置
 			const button = arButton.createButton();
 			document.body.appendChild(button);
+
+
+
+
+
 		</script>
 	</body>
 </html>
