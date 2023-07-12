@@ -40,6 +40,7 @@ class ARButton {
 	}
 
 	// 値が変更された時に実行したい関数を配列に登録する
+  // 今回はHTMLから関数を登録する
   addValueChangedCallback(callback) {
     this.valueChangedCallbacks.push(callback);
   }
@@ -52,7 +53,9 @@ class ARButton {
     for (const callback of this.valueChangedCallbacks) {
       callback(this.value);
     }
+    console.log("this.valueChangedCallbacks : ", this.valueChangedCallbacks);
   }
 }
 
 export {ARButton};
+
