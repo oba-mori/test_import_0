@@ -17,7 +17,7 @@
 	</head>
 	<body>
 
-
+		<button id="toggleButton">BUTTON</button>
 
 
 
@@ -30,10 +30,6 @@
 			// 値が変更された時に通知が来て実行される関数
 			function handleValueChanged(value) {
 				console.log('値が変更されました:', value);
-
-				
-
-
 			
 				//表示
 				console.log('a : ', arButton.a);
@@ -50,6 +46,13 @@
 			document.body.appendChild(button);
 
 
+
+			const toggleButton = document.getElementById('toggleButton');
+
+			toggleButton.addEventListener('click', () => {
+				// arButton.incrementValue(); // メンバ関数の呼び出し
+				console.log('value:', arButton.value); // valueの値を表示
+			});
 
 
 
