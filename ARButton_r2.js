@@ -20,6 +20,9 @@ class ARButton {
       console.log('新ボタンがクリックされました');
       // ここにボタンがクリックされたときの処理を記述します
       this.k = this.k + 1;
+      			//表示
+      console.log('ボタンクリック後の値:', this.k);
+
     });
 
     // body要素にボタン要素を追加
