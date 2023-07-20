@@ -7,6 +7,29 @@ class ARButton {
     this.a = 0;
   }
 
+
+  
+button_sakusei(){
+
+  // ボタン要素を作成
+  const button = document.createElement('button');
+  button.textContent = '新ボタン';
+
+  // ボタンクリックイベントを設定
+  button.addEventListener('click', () => {
+    console.log('新ボタンがクリックされました');
+    // ここにボタンがクリックされたときの処理を記述します
+  });
+
+  // body要素にボタン要素を追加
+  document.body.appendChild(button);
+
+}
+
+
+  
+
+
   createButton() {
     const button = document.createElement('button');
     button.textContent = 'ボタン';
