@@ -25,7 +25,7 @@ button_sakusei(){
   document.body.appendChild(button);
 
 }
-
+button_sakusei();
 
   
 
