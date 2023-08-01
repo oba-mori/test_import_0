@@ -17,9 +17,8 @@ class ARButton {
 
   //static関数
   static createButton_static() {
-    this.q = 1;
-    console.log('createButton 呼び出し q:', this.q);
-
+    ARButton.q = 1;
+    console.log('createButton 呼び出し q:', ARButton.q);
   }
 
 
