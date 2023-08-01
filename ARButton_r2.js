@@ -47,6 +47,7 @@ class ARButton {
       console.log('ボタンクリック後の値 k:', this.k);
 
 
+      ARButton.q = ARButton.q + 1;
       console.log('ボタンクリック後の値 q:', ARButton.q);
     });
 
