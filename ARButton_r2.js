@@ -14,11 +14,12 @@ class ARButton {
 
 
   static q = 0;
-  
+
   //static関数
   static createButton_static() {
     this.q = 1;
     console.log('createButton 呼び出し q:', this.q);
+
   }
 
 
@@ -46,7 +47,7 @@ class ARButton {
       console.log('ボタンクリック後の値 k:', this.k);
 
 
-      console.log('ボタンクリック後の値 q:', this.q);
+      console.log('ボタンクリック後の値 q:', ARButton.q);
     });
 
     // body要素にボタン要素を追加
