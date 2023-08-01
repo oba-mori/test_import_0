@@ -6,7 +6,6 @@ class ARButton {
 
     this.a = 0;
     this.k = 0;
-    this.q = 0;
   }
 
 
@@ -14,7 +13,8 @@ class ARButton {
 
 
 
-
+  static q = 0;
+  
   //static関数
   static createButton_static() {
     this.q = 1;
