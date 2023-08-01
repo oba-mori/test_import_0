@@ -6,9 +6,31 @@ class ARButton {
 
     this.a = 0;
     this.k = 0;
+    this.q = 0;
   }
 
 
+
+
+
+
+
+  //static関数
+  static createButton_static() {
+    this.q = 1;
+    console.log('createButton 呼び出し q:', this.q);
+  }
+
+
+
+
+
+
+
+
+
+
+  
   // ボタン作成
   button_sakusei(){
     // ボタン要素を作成
@@ -20,9 +42,11 @@ class ARButton {
       console.log('新ボタンがクリックされました');
       // ここにボタンがクリックされたときの処理を記述します
       this.k = this.k + 1;
-      			//表示
-      console.log('ボタンクリック後の値:', this.k);
+      //表示
+      console.log('ボタンクリック後の値 k:', this.k);
 
+
+      console.log('ボタンクリック後の値 q:', this.q);
     });
 
     // body要素にボタン要素を追加
